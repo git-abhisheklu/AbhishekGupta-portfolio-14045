@@ -82,3 +82,20 @@ document.getElementById('scroll-down').addEventListener('click', function () {
     behavior: 'smooth'
   });
 });
+
+// Theme toggle logic
+const toggleBtn = document.getElementById("theme-toggle");
+const body = document.body;
+
+toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("dark-theme");
+    localStorage.setItem("theme", body.classList.contains("dark-theme") ? "dark" : "light");
+});
+
+// Persist theme on reload
+window.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        body.classList.add("dark-theme");
+    }
+});

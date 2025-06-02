@@ -372,3 +372,47 @@ footer {
   background-color: #ff6f61;
   transform: scale(1.1);
 }
+
+/* Theme toggle button style */
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #7b2ff2;
+  transition: transform 0.3s ease;
+}
+
+#theme-toggle:hover {
+  transform: rotate(20deg);
+}
+
+/* Dark mode styles */
+body.dark-theme {
+  background: linear-gradient(135deg, #1f1f1f 0%, #3d3d3d 100%);
+  color: #f1f1f1;
+}
+
+body.dark-theme .nav-links li a {
+  color: #f1f1f1;
+}
+
+body.dark-theme .nav-links li a:hover {
+  color: #f953c6;
+}
+
+body.dark-theme .glass-nav {
+  background: rgba(20, 20, 20, 0.8);
+  box-shadow: 0 4px 24px rgba(255, 255, 255, 0.07);
+}
+
+body.dark-theme .card,
+body.dark-theme .hero-card {
+  background: rgba(40, 40, 40, 0.95);
+  box-shadow: 0 4px 24px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme footer {
+  background: rgba(123, 47, 242, 0.2);
+  color: #fff;
+}
