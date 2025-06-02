@@ -99,3 +99,45 @@ window.addEventListener("DOMContentLoaded", () => {
         body.classList.add("dark-theme");
     }
 });
+
+// ...existing code...
+
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  let valid = true;
+
+  const email = document.getElementById('email');
+  const subject = document.getElementById('subject');
+  const message = document.getElementById('message');
+
+  // Clear previous error messages
+  document.getElementById('email-error').textContent = '';
+  document.getElementById('subject-error').textContent = '';
+  document.getElementById('message-error').textContent = '';
+
+  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  if (!email.value.trim()) {
+    document.getElementById('email-error').textContent = 'Email is required.';
+    valid = false;
+  } else if (!emailPattern.test(email.value.trim())) {
+    document.getElementById('email-error').textContent = 'Invalid email format.';
+    valid = false;
+  }
+
+  if (!subject.value.trim()) {
+    document.getElementById('subject-error').textContent = 'Subject is required.';
+    valid = false;
+  }
+
+  if (!message.value.trim()) {
+    document.getElementById('message-error').textContent = 'Message is required.';
+    valid = false;
+  }
+
+  if (valid) {
+    alert('Form submitted successfully!');
+    document.getElementById('contact-form').reset();
+  }
+});
+
+// ...existing code...
