@@ -1,7 +1,7 @@
 //typewriter effect using JS
 const dynamicContent=document.getElementById("dynamic-text");
 console.log(dynamicContent);
-const phrases=["Software developer...", "Student...", "Tech-enthusiast..."];
+const phrases=["Software developer...", "Problem Solver...", "Lifelong Learner", "Tech-enthusiast..."];
 let writeTiming=400;
 let deleteTiming=100;
 let phraseIndex=0;
