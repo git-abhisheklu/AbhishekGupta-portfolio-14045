@@ -11,6 +11,12 @@ header {
     top: 0;
     z-index: 100;
 }
+section {
+    scroll-margin-top: 100px; /* adjust based on your navbar height */
+}
+:target {
+    scroll-margin-top: 100px;
+}
 
 .glass-nav {
     display: flex;
